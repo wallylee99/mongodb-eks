@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mongo-cluster
+  region: ca-central-1
+
+nodeGroups:
+  - name: linux
+    instanceType: t2.micro
+    desiredCapacity: 2
+    privateNetworking: true
